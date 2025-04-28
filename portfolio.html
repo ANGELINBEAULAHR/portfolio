@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angel Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+<!-- Header -->
+<header class="flex justify-between items-center px-8 py-6 bg-transparent text-white shadow-md">
+  <!-- Logo -->
+  <div class="flex items-center space-x-3 text-2xl font-bold">
+    <i class="fa-solid fa-code text-purple-400"></i>
+    <span>portfolio</span>
+  </div>
+
+  <!-- Hamburger Button (only visible on mobile) -->
+  <div class="md:hidden">
+    <button id="menu-toggle" class="focus:outline-none">
+      <i class="fa-solid fa-bars text-2xl"></i>
+    </button>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav id="menu" class="hidden md:flex space-x-8 text-lg font-medium">
+    <a href="#about" class="hover:text-purple-400 transition duration-300">About</a>
+    <a href="#skills" class="hover:text-purple-400 transition duration-300">Skills</a>
+    <a href="#projects" class="hover:text-purple-400 transition duration-300">Projects</a>
+    <a href="#services" class="hover:text-purple-400 transition duration-300">Services</a>
+    <a href="#contact" class="hover:text-purple-400 transition duration-300">Contact</a>
+  </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 mt-4 text-lg font-medium">
+  <a href="#about" class="hover:text-purple-400 transition duration-300">About</a>
+  <a href="#skills" class="hover:text-purple-400 transition duration-300">Skills</a>
+  <a href="#projects" class="hover:text-purple-400 transition duration-300">Projects</a>
+  <a href="#services" class="hover:text-purple-400 transition duration-300">Services</a>
+  <a href="#contact" class="hover:text-purple-400 transition duration-300">Contact</a>
+</div>
+
+
+
+  
+  <!-- Hero Section -->
+  <section id="about" class="flex flex-col md:flex-row items-center justify-center py-20 px-8" data-aos="fade-up">
+    <img src="images/profile1.jpg" alt="Profile" class="rounded-full w-60 h-60 object-cover mb-6 md:mb-0 md:mr-10">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">Hi, I'm Angelin</h2>
+      <p class="text-lg  "> A passionate Front-End developer and designer
+
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 mt-6">
+        <a href="RESUME.pdf" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-purple-400/50 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+          Resume
+        </a>
+      
+        <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-purple-400/50 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+          Hire Me
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-gradient-to-b from-purple-900 via-black to-purple-900 text-white">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      
+      <!-- About Title -->
+      <h2 class="text-4xl font-bold mb-8 animate-bounce">About Me</h2>
+      
+      <!-- About Paragraph -->
+      <p class="text-purple-100 text-lg leading-relaxed mb-10">
+        Hello! 👋 I'm <span class="text-purple-400 font-semibold">Angelin Beaulah</span>, a passionate Front-End Developer with a strong love for crafting beautiful, responsive, and dynamic websites. 
+        I believe in building experiences that are simple, elegant, and user-centered. Outside of coding, I enjoy learning new technologies, designing creative layouts, and exploring the world of UI/UX trends.
+      </p>
+      
+      <!-- Skills Icons -->
+      <div class="flex flex-wrap justify-center gap-10 mt-10">
+        
+        <div class="flex flex-col items-center transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 hover:text-purple-200">
+          <i class="fa-solid fa-code text-5xl text-purple-400 mb-3 hover:text-purple-300 transition-colors duration-300"></i>
+          <span class="text-purple-300 font-semibold">Web Development</span>
+        </div>
+  
+        <div class="flex flex-col items-center transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 hover:text-purple-200">
+          <i class="fa-solid fa-paintbrush text-5xl text-purple-400 mb-3 hover:text-purple-300 transition-colors duration-300"></i>
+          <span class="text-purple-300 font-semibold">UI/UX Design</span>
+        </div>
+  
+        <div class="flex flex-col items-center transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 hover:text-purple-200">
+          <i class="fa-solid fa-laptop-code text-5xl text-purple-400 mb-3 hover:text-purple-300 transition-colors duration-300"></i>
+          <span class="text-purple-300 font-semibold">Responsive Design</span>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  <!--skills-->
+<section id="skills" class="py-20 px-8 max-w-7xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-10 animate-bounce">Skills</h2>
+    
+    <!-- Technical Skills (Grid with hover effect) -->
+    <h3 class="text-2xl font-semibold mb-6"></h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Skill 1 -->
+      <div class="group relative bg-purple-800 p-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300">
+        <div class="text-center mb-4">
+          <i class="fab fa-html5 text-4xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-center">HTML</h4>
+        <p class="text-center text-sm mt-2">Markup language for building web pages.</p>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 text-center p-4">
+          <p class="text-lg font-semibold">Proficiency: 99%</p>
+          <p>Tools: Visual Studio Code</p>
+        </div>
+      </div>
+      
+      <!-- Skill 2 -->
+      <div class="group relative bg-purple-800 p-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300">
+        <div class="text-center mb-4">
+          <i class="fab fa-css3-alt text-4xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-center">CSS</h4>
+        <p class="text-center text-sm mt-2">Styling language for web pages.</p>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 text-center p-4">
+          <p class="text-lg font-semibold">Proficiency: 98%</p>
+          <p>Tools: Figma, Adobe XD</p>
+        </div>
+      </div>
+      
+      <!-- Skill 3 -->
+      <div class="group relative bg-purple-800 p-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300">
+        <div class="text-center mb-4">
+          <i class="fab fa-js-square text-4xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-center">JavaScript</h4>
+        <p class="text-center text-sm mt-2">Programming language for dynamic web pages.</p>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 text-center p-4">
+          <p class="text-lg font-semibold">Proficiency: 96%</p>
+          <p>Tools: React.js,Node.js</Node></p>
+        </div>
+      </div>
+      
+      <!-- Skill 4 -->
+      <div class="group relative bg-purple-800 p-6 rounded-lg shadow-lg hover:bg-purple-700 transition duration-300">
+        <div class="text-center mb-4">
+          <i class="fab fa-react text-4xl"></i>
+        </div>
+        <h4 class="text-xl font-semibold text-center">React.js</h4>
+        <p class="text-center text-sm mt-2">JavaScript library for building user interfaces.</p>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 text-center p-4">
+          <p class="text-lg font-semibold">Proficiency: 98%</p>
+          <p>Tools: React DevTools, Jest</p>
+        </div>
+      </div>
+  
+    </div>
+</section>
+<!--certification-->
+<section id="certifications" class="py-20 bg-gradient-to-b from-purple-900 via-black to-purple-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 animate-bounce">Certifications</h2>
+  
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+  
+        <!-- Certification Card 1 -->
+        <div class="group bg-gradient-to-tr from-purple-700 via-purple-900 to-black rounded-3xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 relative overflow-hidden">
+          <div class="absolute -top-8 -left-8 w-32 h-32 bg-purple-400 opacity-20 blur-3xl group-hover:animate-spin-slow"></div>
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-purple-300">Python Expert</h3>
+          <p class="text-purple-300">Certified in Python from HackerRank
+          </p>
+        </div>
+  
+        <!-- Certification Card 2 -->
+        <div class="group bg-gradient-to-tr from-purple-700 via-purple-900 to-black rounded-3xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 relative overflow-hidden">
+          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-400 opacity-20 blur-3xl group-hover:animate-pulse"></div>
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-purple-300">Responsive Web Design</h3>
+          <p class="text-purple-300">Certified by FreeCodeCamp</p>
+        </div>
+  
+        <!-- Certification Card 3 -->
+        <div class="group bg-gradient-to-tr from-purple-700 via-purple-900 to-black rounded-3xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 relative overflow-hidden">
+          <div class="absolute -top-8 -right-8 w-32 h-32 bg-purple-400 opacity-20 blur-3xl group-hover:animate-ping"></div>
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-purple-300">UI/UX Design</h3>
+          <p class="text-purple-300">Certified by Udemy</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-8 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold mb-10 text-center" data-aos="fade-up">Projects</h2>
+
+  <!-- Project 1 -->
+  <div class="flex flex-col md:flex-row items-center mb-20" data-aos="fade-right">
+    <img src="images/r3.webp" alt="Project 1" class="w-96 h-64 object-cover rounded-lg shadow-lg">
+    <div class="md:ml-10 mt-6 md:mt-0">
+      <h3 class="text-2xl font-semibold mb-3">RARE BEAUTY - Cosmetic Website </h3>
+      <p class="max-w-md"><strong>Rare Beauty</strong> it's a digital reflection of passion.Designed with the latest idea where user can view celebrities choice and purchase varieties of cosmetics product.
+        <span class="text-indigo-400 font-semibold">It is our Rare Beauty where every pixel tells a story.</span>
+      </p>
+    </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="flex flex-col md:flex-row-reverse items-center" data-aos="fade-left">
+    <img src="images/f2.webp" alt="Project 2" class="w-96 h-64 object-cover rounded-lg shadow-lg">
+    <div class="md:mr-10 mt-6 md:mt-0">
+      <h3 class="text-2xl font-semibold mb-3"> NUTROFIT- Your Ultimate Fitness Companion</h3>
+      <p class="max-w-md"><strong>NutroFit</strong> is more than just a fitness platform it’s your ultimate lifestyle companion,it provides customized meal plans, expert workouts, smart progress tracking.
+        <span class="text-indigo-400 font-semibold">It is NutroFit.</span>
+      </p>
+    </div>
+  </div>
+
+  <!---project 3-->
+  <div class="flex flex-col md:flex-row items-center mb-20" data-aos="fade-right">
+    <img src="images/listenko.png" alt="Project 1" class="w-96 h-64 object-cover rounded-lg shadow-lg">
+    <div class="md:ml-10 mt-6 md:mt-0">
+      <h3 class="text-2xl font-semibold mb-3">LISTENKO - Music Streaming App</h3>
+      <p class="max-w-md"><strong>Listeko</strong> is your space to discover, enjoy, and share music from around the world.We believe music connects hearts and tells stories. Listeko offers a smooth, personal way to explore your favorite songs, artists, and playlists.<span class="text-purple-400 font-semibold">Tune in-Feel the vibe-Live the music.</span></p>
+    </div>
+  </div>
+</section>
+<!---services--->
+
+
+<section id="services" class="py-16 bg-gradient-to-b from-black via-purple-950 to-black text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+  
+      <h2 class="text-4xl font-bold mb-12">Services I Offer</h2>
+  
+      <div class="grid md:grid-cols-3 gap-8">
+  
+        <!-- Service 1 -->
+        <div class="bg-white/10 rounded-2xl p-8 backdrop-blur-md hover:scale-105 transition transform duration-300 shadow-lg hover:shadow-purple-500/40">
+          <i class="fas fa-code text-5xl text-purple-400 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Frontend Development</h3>
+          <p class="text-gray-300">
+            Building modern, responsive, and user-friendly websites using the latest technologies like HTML, CSS, JavaScript, and frameworks.
+          </p>
+        </div>
+  
+        <!-- Service 2 -->
+        <div class="bg-white/10 rounded-2xl p-8 backdrop-blur-md hover:scale-105 transition transform duration-300 shadow-lg hover:shadow-purple-500/40">
+          <i class="fas fa-pen-nib text-5xl text-purple-400 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Landing Page Creation</h3>
+          <p class="text-gray-300">
+            Designing high-converting, visually appealing landing pages tailored to your brand and audience to boost engagement.
+          </p>
+        </div>
+  
+        <!-- Service 3 -->
+        <div class="bg-white/10 rounded-2xl p-8 backdrop-blur-md hover:scale-105 transition transform duration-300 shadow-lg hover:shadow-purple-500/40">
+          <i class="fas fa-laptop-code text-5xl text-purple-400 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Website Redesign</h3>
+          <p class="text-gray-300">
+            Revamping outdated websites into modern, sleek, and SEO-optimized designs to improve user experience and performance.
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+<!--testimonials-->  
+<section id="testimonials" class="py-20 px-6 bg-gradient-to-r from-purple-900 via-black to-purple-900">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">Client Testimonials</h2>
+  
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      
+      <!-- Testimonial 1 -->
+      <div class="bg-purple-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 relative">
+        <!-- Quote Icon -->
+        <i class="fa-solid fa-quote-left text-purple-400 text-3xl absolute top-4 left-4"></i>
+  
+        <div class="flex items-center mb-4 mt-8">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 1" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="text-xl font-semibold text-white">Emma</h4>
+            <p class="text-purple-300 text-sm">CEO, StartUp Co.</p>
+          </div>
+        </div>
+        
+        <p class="text-purple-100 text-base mb-4">
+          "Working with you was amazing! My website turned out stunning, fast, and exactly what I needed. Highly recommend!"
+        </p>
+  
+        <!-- Star Ratings -->
+        <div class="flex space-x-1 text-yellow-400">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+      </div>
+  
+      <!-- Testimonial 2 -->
+      <div class="bg-purple-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 relative">
+        <i class="fa-solid fa-quote-left text-purple-400 text-3xl absolute top-4 left-4"></i>
+  
+        <div class="flex items-center mb-4 mt-8">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Client 2" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="text-xl font-semibold text-white">Charles Davis</h4>
+            <p class="text-purple-300 text-sm">Manager, TechCorp</p>
+          </div>
+        </div>
+  
+        <p class="text-purple-100 text-base mb-4">
+          "You have a great eye for design and functionality. The landing page boosted our leads by 89.9%! Fantastic work."
+        </p>
+  
+        <div class="flex space-x-1 text-yellow-400">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+  
+      <!-- Testimonial 3 -->
+      <div class="bg-purple-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 relative">
+        <i class="fa-solid fa-quote-left text-purple-400 text-3xl absolute top-4 left-4"></i>
+  
+        <div class="flex items-center mb-4 mt-8">
+          <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Client 3" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="text-xl font-semibold text-white">Sophia</h4>
+            <p class="text-purple-300 text-sm">Freelance Writer</p>
+          </div>
+        </div>
+  
+        <p class="text-purple-100 text-base mb-4">
+          "Super professional and very quick turnaround. My portfolio site is beautiful and easy to navigate!"
+        </p>
+  
+        <div class="flex space-x-1 text-yellow-400">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+ <!--contact---> 
+
+  <section id="contact" class="py-20 bg-gradient-to-r from-purple-900 via-black to-purple-900 text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8 animate-pulse">Contact Me</h2>
+  
+      <p class="mb-12 text-purple-300">Got a project in mind? Let's build something amazing together!</p>
+  
+      <div class="grid md:grid-cols-2 gap-8">
+  
+        <!-- Contact Info -->
+        <div class="space-y-6 text-left">
+  
+          <div class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-phone text-3xl text-purple-400"></i>
+            <span class="text-lg">+91 7871331294</span>
+          </div>
+  
+          <div class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-envelope text-3xl text-purple-400"></i>
+            <span class="text-lg">angelinbeaulahr71@gmail.com</span>
+          </div>
+  
+          <div class="flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+            <i class="fa-brands fa-linkedin text-3xl text-purple-400"></i>
+            <a href="https://www.linkedin.com/in/angelin-beaulah-r-41704832b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8rFfTXR3S0qFBb2pOLon0A%3D%3D" target="_blank" class="text-lg hover:underline">linkedin Id</a>
+          </div>
+  
+        </div>
+  
+       <!-- Contact Form -->
+<form action="thankyou.html" method="GET" class="bg-purple-800 p-8 rounded-2xl shadow-2xl hover:shadow-purple-600 transition duration-500 space-y-6">
+    <div class="flex flex-col">
+      <label for="name" class="mb-2 text-left">Name</label>
+      <input id="name" name="name" type="text" class="p-3 rounded-lg bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your Name" required>
+    </div>
+    <div class="flex flex-col">
+      <label for="email" class="mb-2 text-left">Email</label>
+      <input id="email" name="email" type="email" class="p-3 rounded-lg bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your Email" required>
+    </div>
+    <div class="flex flex-col">
+      <label for="message" class="mb-2 text-left">Message</label>
+      <textarea id="message" name="message" rows="4" class="p-3 rounded-lg bg-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Your Message" required></textarea>
+    </div>
+  
+    <!-- Submit Button -->
+    <a href="thankyou.html" target="_blank"><button type="submit" class="bg-purple-500 hover:bg-purple-400 text-white py-3 rounded-lg w-full font-bold transition transform hover:scale-105">
+      Send Message
+    </button></a>
+  </form>
+  </div>
+  </div>
+  </section>
+  <!-- Footer -->
+  <footer class="text-center py-8 border-t border-purple-600 mt-20" data-aos="fade-up">
+    <div class="space-x-6 mb-4">
+      <a href="https://www.linkedin.com/in/angelin-beaulah-r-41704832b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8rFfTXR3S0qFBb2pOLon0A%3D%3D" target="_blank" class="hover:text-purple-400">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/your-github-id" target="_blank" class="hover:text-purple-400">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="https://mail.google.com/mail" target="_blank" class="hover:text-purple-400">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+    </div>
+    <p>©2025 Angelin Beaulah R — All Rights Reserved</p>
+  </footer>
+  
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+
+    const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  </script>
+  </body>
+  </html>
+  
